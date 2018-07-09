@@ -36,10 +36,14 @@ model.add(Dense(8, init='uniform', activation='relu'))
 model.add(Dense(1, init='uniform', activation='sigmoid'))
 
 # Compile model
-
-# you can customize the optimizer as follows (take RMSprop for example)
-# model.compile(loss='binary_crossentropy', optimizer=RMSprop(lr=0.000000001), metrics=['accuracy'])
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# maybe use a different default optimizer RMSprop
+# model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+
+# you can also customize the optimizer
+# model.compile(loss='binary_crossentropy', optimizer=RMSprop(lr=0.000000001), metrics=['accuracy'])
+
 
 # Fit the model
 model.fit(X, y, nb_epoch=150, batch_size=10, verbose=0)
