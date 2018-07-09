@@ -9,6 +9,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import model_from_json
 
+# import some popular optimizers, choose one as you like or import more
+form keras.optimizers import Adam
+from keras.optimizers import RMSprop
+
 import os
 
 import numpy as np
@@ -32,6 +36,9 @@ model.add(Dense(8, init='uniform', activation='relu'))
 model.add(Dense(1, init='uniform', activation='sigmoid'))
 
 # Compile model
+
+# you can customize the optimizer as follows (take RMSprop for example)
+# model.compile(loss='binary_crossentropy', optimizer=RMSprop(lr=0.000000001), metrics=['accuracy'])
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Fit the model
