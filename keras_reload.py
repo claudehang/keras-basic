@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+'''
+follow this website
+https://anifacc.github.io/deeplearning/machinelearning/python/2017/08/24/dlwp-ch13-save-models/
+'''
 
 # MLP for json, hdf5
 from keras.models import Sequential
